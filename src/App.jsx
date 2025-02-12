@@ -9,10 +9,9 @@ import "./App.css";
 function App() {
   const [client, setClient] = useState(null);
   var [timer, setTimer] = useState(10 * 60);
-  var [pomodoroTotal, setPomodoroTotal] = useState(3);
+  var [pomodoroTotal, setPomodoroTotal] = useState(5);
   const [pomoCount, setPomoCount] = useState(0);
-  const [etiquetas, setEtiquetas] = useState("💻Estamos por iniciar🍵");
-  const [autoTimer, setAutoTimer] = useState(true);
+  const [etiquetas, setEtiquetas] = useState("💻 Vamos começar 🍵");
   const [backgroundImg, setBackgroundImg] = useState(backgroundImgBreak);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ function App() {
         newClient.disconnect();
       }
     };
-  }, []); // No necesitas pasarlo en dependencias
+  }, []);
 
   useEffect(() => {
     var iniciado = false;
@@ -45,24 +44,24 @@ function App() {
         if (--timer < 0) {
           let audio = new Audio(campana);
           if (vueltas % 2 == 0) {
-            timer = 60 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
+            timer = 50 * 60;
             client.say(
-              "brunispet",
-              "Estamos en este momento estudiando / trabajando, puedes ocultar el chat para no distraerte. Si no sabes cómo se hace, avísanos y te explicamos."
+              "emanuwlly",
+              "No momento, estamos estudando/trabalhando. Você pode ocultar o chat para não se distrair. Se não souber como fazer isso, informe-nos e nós explicaremos a você."
             );
-            setEtiquetas("PRODUCTIVO 📚📖");
+            setEtiquetas("📖 Tiempo productivo 📖");
             audio.play();
             setBackgroundImg(backgroundImgPomo);
             vueltas++;
             pomo++;
           } else {
             vueltas++;
-            timer = 10 * 60; // Pomodoro de 10 minuto de descanso, ajustar según lo que crean necesario.
+            timer = 15 * 60;
             client.say(
-              "brunispet",
-              "Estamos en break, a estirar, a reponer y jugar. Que sea un buen descanso. ¿Cómo estuvo el pomo?. Si el streamer no se dio cuenta podes cambiar este mensaje por !lachancla"
+              "emanuwlly",
+              "Estamos no intervalo, nos alongamos, nos reabastecemos e jogamos. Bom tempo de descanso. "
             );
-            setEtiquetas("DESCANSO 🍙🥤");
+            setEtiquetas("🥤Estamos descansando🍙");
             setBackgroundImg(backgroundImgBreak);
             audio.play();
           }
@@ -70,11 +69,14 @@ function App() {
             clearInterval(interval);
             console.log(`Se completaron ${pomodoroTotal} pomodoros`);
             client.say(
-              "brunispet",
-              "Es el final del break, a estirar, a reponer y jugar. Espero que fuera una buena jornada para ti"
+              "emanuwlly",
+              "É o fim do intervalo, esticar, reabastecer e jogar. Espero que tenha sido um bom dia para você"
             );
-            setEtiquetas("FINAL DE STREAM");
-            client.say("brunispet", "Llegamos al final del stream");
+            setEtiquetas("Fim da transmissã");
+            client.say(
+              "emanuwlly",
+              "Chegamos ao final, obrigado pela companhia"
+            );
             iniciado = false;
             audio.play();
             return;
@@ -83,8 +85,6 @@ function App() {
         }
       }, 1000);
     }
-
-    /* Funciones */
 
     function minutosOn(num) {
       const newTimer = parseInt(num) * 60;
@@ -103,16 +103,11 @@ function App() {
       iniciado = false;
     }
 
-    function timerAuto() {
-      setAutoTimer(!autoTimer);
-    }
-
     function pomot(num) {
       pomodoroTotal = parseInt(num);
       setPomodoroTotal(num);
     }
 
-    /* Handler de Twitch */
     if (client) {
       client.on("message", (channel, userstate, message, self) => {
         if (self) return;
@@ -122,38 +117,35 @@ function App() {
         const username = userstate.username;
         const mod = userstate?.mod;
         const num = parseInt(args);
-        if (username === "cuartodechenz" || mod) {
+        if (username === "cuartodechenz" || username === "emanuwlly" || mod) {
           switch (command) {
             case "start":
               if (!iniciado) {
                 iniciado = true;
                 startTimer();
               } else {
-                return console.log("Ya hay un timer activo");
+                return console.log("Já existe um tempo definido");
               }
               break;
             case "pause":
               stopTimer();
               break;
-            case "auto":
-              timerAuto();
-              break;
             case "min":
               if (!isNaN(num)) {
                 minutosOn(num);
               } else {
-                console.log("El argumento no es un número válido");
+                console.log("o argumento não é um número válido");
               }
               break;
             case "pomot":
               if (!isNaN(num)) {
                 pomot(num);
               } else {
-                console.log("El argumento no es un número válido");
+                console.log("O argumento não é um número válido");
               }
               break;
             default:
-              console.log("No es un comando válido");
+              console.log("Não é um comando válido");
           }
         }
       });
@@ -169,9 +161,12 @@ function App() {
         }}
       >
         <div className="contenedor_elementos">
-          <div>
-            <div>Pomo Actual {pomoCount}</div>
-            <div>Pomo Totales {pomodoroTotal}</div>
+          <div className="contendor_pomos">
+            <div className="contendor_pomos_items">
+              <div className="contendor_pomos_item">{pomoCount}</div>
+              <div className="contendor_pomos_item">/</div>
+              <div className="contendor_pomos_item"> {pomodoroTotal}</div>
+            </div>
           </div>
           <div
             className="contendor_timer"
