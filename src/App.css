@@ -1,3 +1,4 @@
+/* Estilos generales */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,59 +6,76 @@
   text-align: center;
 }
 
-.contenedor {
-  width: 600px;
-  height: 570px;
+/* Imagen */
+.image {
+  width: 200px;
+  height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.contenedor_elementos {
-  height: 570px;
+/* Contenedores principales */
+.contenedor {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
+.contenedor_elementos {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Temporizador */
 .contendor_timer {
   display: flex;
-  flex-direction: flex;
   justify-content: center;
   font-size: 90px;
-  color: #7be4fb;
+  color: #66add9;
 }
 
 .contendor_timer_elements {
-  background-color: rgba(9, 12, 12, 0.802);
-  border-color: #7be4fb;
-  border: solid 3px;
+  background-color: #fdfdfd;
+  border: 3px solid;
   border-radius: 50px;
-  height: 140;
+  height: 130px;
   width: 350px;
+  position: relative;
+  animation: border-animation 10s infinite ease-in-out;
 }
+
+/* Etiqueta */
 .contendor_etiqueta {
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 20px;
-  color: #7be4fb;
+  color: #66add9;
+  margin-top: -20px;
 }
 
 .contenedor_etiqueta_element {
-  margin-top: -20px;
-  background-color: #2c4072;
+  font-size: 40px;
+  margin-top: -15px;
+  background-color: #fdfdfd;
   border-radius: 50px;
-  width: 280px;
+  border: 3px solid;
+  width: 600px;
   font-weight: 400;
+  animation: border-animation 10s infinite ease-in-out;
 }
 
+/* Pomos */
 .contendor_pomos {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: -30px;
-  margin-right: -300px;
+  margin-right: -220px;
   position: relative;
 }
 
@@ -68,14 +86,40 @@
   align-items: center;
   width: 130px;
   height: 50px;
-  border: solid 3px;
-  border-color: #7be4fb;
-  background-color: black;
+  border: 3px solid;
+  background-color: #fdfdfd;
   border-radius: 30%;
   font-size: 30px;
-  color: rgb(14, 221, 240);
+  color: #66add9;
+  animation: border-animation 10s infinite ease-in-out;
+  z-index: 10;
 }
 
 .contendor_pomos_item {
   font-weight: 700;
+}
+
+/* Animación de borde con degradado */
+@keyframes border-animation {
+  0% {
+    border-color: #363368;
+  }
+  15% {
+    border-color: #4f7cbf;
+  }
+  30% {
+    border-color: #66add9;
+  }
+  45% {
+    border-color: #82c8e7;
+  }
+  60% {
+    border-color: #a0dbf2;
+  }
+  75% {
+    border-color: #4f7cbf;
+  }
+  100% {
+    border-color: #363368;
+  }
 }

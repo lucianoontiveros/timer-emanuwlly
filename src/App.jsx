@@ -154,12 +154,7 @@ function App() {
 
   return (
     <div>
-      <div
-        className="contenedor"
-        style={{
-          backgroundImage: `url(${backgroundImg})`,
-        }}
-      >
+      <div className="contenedor">
         <div className="contenedor_elementos">
           <div className="contendor_pomos">
             <div className="contendor_pomos_items">
@@ -174,11 +169,17 @@ function App() {
           >
             <div className="contendor_timer_elements">{timer}</div>
           </div>
-          <div className="contendor_etiqueta">
-            <div id="timerNote">
-              <div className="contenedor_etiqueta_element">{etiquetas}</div>
-            </div>
-          </div>
+        </div>
+        <div
+          className="image"
+          style={{
+            backgroundImage: `url(${backgroundImg})`,
+          }}
+        ></div>
+      </div>
+      <div className="contendor_etiqueta">
+        <div id="timerNote">
+          <div className="contenedor_etiqueta_element">{etiquetas}</div>
         </div>
       </div>
     </div>
