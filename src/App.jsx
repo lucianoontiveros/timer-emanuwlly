@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TwitchClient from "./data/CreateTwitchClient.jsx";
+import TwitchClient from "./data/Create_twitch_client.jsx";
 import campana from "./campana.mp3";
 import backgroundImgPomo from "./img/michi_adulto.png";
 import backgroundImgBreak from "./img/michi_joven.png";

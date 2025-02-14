@@ -2,8 +2,7 @@ import tmi from "tmi.js";
 
 const Create_twitch_client = () => {
   const client = new tmi.Client({
-    // channels: ["emanuwlly"],
-    channels: ["brunispet"],
+    channels: ["emanuwlly"],
   });
 
   client
