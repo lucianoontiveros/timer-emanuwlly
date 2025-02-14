@@ -4,9 +4,7 @@
 
 Esta aplicación React implementa un temporizador Pomodoro integrado con Twitch, configurado y ejecutable en el canal [Emanuwlly](https://www.twitch.tv/emanuwlly "Emanuwlly") Permite iniciar, pausar y configurar el temporizador mediante comandos en el chat de Twitch. Además, alterna entre períodos de trabajo y descanso, mostrando imágenes y etiquetas informativas en función del estado del temporizador.
 
-[![Presentación Timer Emanuwlly](src/img/presentación.png "Presentación Timer Emanuwlly")](https://timer-emanuwlly.vercel.app/ "Presentación Timer Emanuwlly")
-
-## https://imgur.com/a/R2a5qVF
+## [![Presentación Timer Emanuwlly](src/img/presentación.png "Presentación Timer Emanuwlly")](https://timer-emanuwlly.vercel.app/ "Presentación Timer Emanuwlly")
 
 ## Instalación y Configuración
 
@@ -24,6 +22,8 @@ Esta aplicación React implementa un temporizador Pomodoro integrado con Twitch,
 - `img/michi_adulto.png` y `img/michi_joven.png`: Imágenes para los diferentes estados del Pomodoro.
 - `App.css`: Estilos del proyecto.
 
+[![Michi Joven](src/img/michi_joven.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
+
 ---
 
 ## Funcionamiento
@@ -38,6 +38,8 @@ Esta aplicación React implementa un temporizador Pomodoro integrado con Twitch,
 - `backgroundImg`: Imagen de fondo que cambia según el estado del temporizador.
 - `isRunning`: Indica si el temporizador está en ejecución.
 - `isBreak`: Indica si está en período de descanso.
+
+[![Michi Adulto](src/img/michi_adulto.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
 
 ### Efectos (`useEffect`)
 
@@ -93,6 +95,8 @@ Este proyecto proporciona una herramienta eficiente para gestionar sesiones de e
 
 # Documentação do Projeto Pomodoro com Twitch
 
+[![Presentación Timer Emanuwlly](src/img/presentación.png "Presentación Timer Emanuwlly")](https://timer-emanuwlly.vercel.app/ "Presentación Timer Emanuwlly")
+
 ## Visão Geral
 
 Este aplicativo React implementa um temporizador Pomodoro integrado ao Twitch, configurado e executável no canal [Emanuwlly](https://www.twitch.tv/emanuwlly "Emanuwlly"). Permite iniciar, pausar e configurar o temporizador por meio de comandos no chat do Twitch. Além disso, alterna entre períodos de trabalho e descanso, exibindo imagens e etiquetas informativas de acordo com o estado do temporizador.
@@ -106,6 +110,8 @@ Este aplicativo React implementa um temporizador Pomodoro integrado ao Twitch, c
 - Node.js e npm instalados.
 - Conta do Twitch e configuração do bot.
 - Bibliotecas necessárias instaladas com `npm install`.
+
+[![Michi Joven](src/img/michi_joven.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
 
 ### Estrutura do Projeto
 
@@ -129,6 +135,8 @@ Este aplicativo React implementa um temporizador Pomodoro integrado ao Twitch, c
 - `backgroundImg`: Imagem de fundo que muda de acordo com o estado do temporizador.
 - `isRunning`: Indica se o temporizador está em execução.
 - `isBreak`: Indica se está no período de descanso.
+
+[![Michi Adulto](src/img/michi_adulto.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
 
 ### Efeitos (`useEffect`)
 
@@ -184,6 +192,8 @@ Este projeto fornece uma ferramenta eficiente para gerenciar sessões de estudo 
 
 # Pomodoro Project Documentation with Twitch
 
+[![Presentación Timer Emanuwlly](src/img/presentación.png "Presentación Timer Emanuwlly")](https://timer-emanuwlly.vercel.app/ "Presentación Timer Emanuwlly")
+
 ## Overview
 
 This React application implements a Pomodoro timer integrated with Twitch, configured and executable on the channel [Emanuwlly](https://www.twitch.tv/emanuwlly "Emanuwlly"). It allows starting, pausing, and configuring the timer via commands in the Twitch chat. Additionally, it alternates between work and break periods, displaying images and informative labels based on the timer's state.
@@ -205,6 +215,7 @@ This React application implements a Pomodoro timer integrated with Twitch, confi
 - `campana.mp3`: Alert sound when the timer state changes.
 - `img/michi_adulto.png` and `img/michi_joven.png`: Images for different Pomodoro states.
 - `App.css`: Project styles.
+  [![Michi Joven](src/img/michi_joven.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
 
 ---
 
@@ -220,6 +231,8 @@ This React application implements a Pomodoro timer integrated with Twitch, confi
 - `backgroundImg`: Background image that changes according to the timer state.
 - `isRunning`: Indicates whether the timer is running.
 - `isBreak`: Indicates whether it's in a break period.
+
+[![Michi Adulto](src/img/michi_adulto.png "Michi Joven")](https://timer-emanuwlly.vercel.app/ "Michi Joven")
 
 ### Effects (`useEffect`)
 
