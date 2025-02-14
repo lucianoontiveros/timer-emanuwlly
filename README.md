@@ -4,6 +4,8 @@
 
 Esta aplicación React implementa un temporizador Pomodoro integrado con Twitch, configurado y ejecutable en el canal [Emanuwlly](https://www.twitch.tv/emanuwlly "Emanuwlly") Permite iniciar, pausar y configurar el temporizador mediante comandos en el chat de Twitch. Además, alterna entre períodos de trabajo y descanso, mostrando imágenes y etiquetas informativas en función del estado del temporizador.
 
+[![Presentación Timer Emanuwlly](src/img/presentación.png "Presentación Timer Emanuwlly")](https://timer-emanuwlly.vercel.app/ "Presentación Timer Emanuwlly")
+
 ## https://imgur.com/a/R2a5qVF
 
 ## Instalación y Configuración
