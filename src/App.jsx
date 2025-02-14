@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CreateTwitchClient from "./data/CreateTwitchClient.jsx";
+import TwitchClient from "./data/CreateTwitchClient.jsx";
 import campana from "./campana.mp3";
 import backgroundImgPomo from "./img/michi_adulto.png";
 import backgroundImgBreak from "./img/michi_joven.png";
@@ -15,7 +15,7 @@ function App() {
   const [backgroundImg, setBackgroundImg] = useState(backgroundImgBreak);
 
   useEffect(() => {
-    const newClient = CreateTwitchClient(); // Crea y conecta el cliente
+    const newClient = TwitchClient(); // Crea y conecta el cliente
     setClient(newClient);
 
     return () => {
@@ -49,7 +49,7 @@ function App() {
               "emanuwlly",
               "No momento, estamos estudando/trabalhando. Você pode ocultar o chat para não se distrair. Se não souber como fazer isso, informe-nos e nós explicaremos a você."
             );
-            setEtiquetas("📖 Tiempo productivo 📖");
+            setEtiquetas("📖 é hora de focar 📖");
             audio.play();
             setBackgroundImg(backgroundImgPomo);
             vueltas++;
@@ -61,7 +61,7 @@ function App() {
               "emanuwlly",
               "Estamos no intervalo, nos alongamos, nos reabastecemos e jogamos. Bom tempo de descanso. "
             );
-            setEtiquetas("🥤Estamos descansando🍙");
+            setEtiquetas("🥤Intervalo / hora do café 🍙");
             setBackgroundImg(backgroundImgBreak);
             audio.play();
           }

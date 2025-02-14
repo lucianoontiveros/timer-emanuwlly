@@ -1,8 +1,9 @@
 import tmi from "tmi.js";
 
-const CreateTwitchClient = () => {
+const Create_twitch_client = () => {
   const client = new tmi.Client({
-    channels: ["emanuwlly"],
+    // channels: ["emanuwlly"],
+    channels: ["brunispet"],
   });
 
   client
@@ -12,4 +13,4 @@ const CreateTwitchClient = () => {
   return client;
 };
 
-export default CreateTwitchClient;
+export default Create_twitch_client;
