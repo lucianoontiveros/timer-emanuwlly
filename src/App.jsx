@@ -72,7 +72,7 @@ function App() {
               "emanuwlly",
               "É o fim do intervalo, esticar, reabastecer e jogar. Espero que tenha sido um bom dia para você"
             );
-            setEtiquetas("Fim da transmissã");
+            setEtiquetas("Fim da transmissão");
             client.say(
               "emanuwlly",
               "Chegamos ao final, obrigado pela companhia"
